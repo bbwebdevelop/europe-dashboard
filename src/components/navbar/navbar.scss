@@ -1,0 +1,61 @@
+@import "../../styles/responsive.scss";
+
+.navbar {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  
+ 
+
+  @include sm {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    @include sm {
+      font-size: 1rem;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .icon {
+      @include sm {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .user {
+      display: none;
+    }
+
+    .notification {
+      position: relative;
+
+      span {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+       
+
+        @include sm {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}

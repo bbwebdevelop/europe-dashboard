@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+
+
+.menu {
+  .item {
+    display: flex;
+    display: block;  
+    max-width: max-content; 
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 0 2px;
+    text-align: center;
+
+    &:hover {
+      background-color: #ccd0d925;
+      border-radius: 8px; 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .listItemTitle {
+      color: $main-color;
+
+      &.active {
+        font-weight: bold;
+        color: $soft-color;
+      }
+    }
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+

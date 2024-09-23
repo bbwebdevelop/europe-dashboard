@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.home {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); 
+  text-align: center;
+
+  @include lg {
+    grid-template-columns: 1fr; 
+  }
+  
+  .dropdown {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    label {
+      font-size: 1rem;
+      color: $main-color;
+    }
+
+    .dropdown-select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 0.6px solid #cedef241;
+      background-color: $dark-bg;
+      color: $main-color;
+    }
+  }
+
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 0.6px solid #cedef241;
+
+    @include lg {
+      width: 100%; 
+    }
+  }
+
+  .box1, .box2, .box3, .box4, .box5, .box6 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
